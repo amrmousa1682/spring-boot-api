@@ -22,7 +22,6 @@ public class AdvertiseDto implements Serializable {
     private Integer userId;
     private String userName;
     private String userEmail;
-    private String userPassword;
     private String userPhoneNumber;
     private String userAddress;
 }

@@ -12,10 +12,10 @@ public class Util {
 
     public static <T> void checkIfIdExists(T repo, Integer id) throws IdNotFoundException {
         if (repo instanceof UserRepository userRepository && !userRepository.existsById(id))
-            throw new IdNotFoundException();
+            throw new IdNotFoundException("user not found");
         if (repo instanceof CategoryRepository categoryRepository && !categoryRepository.existsById(id))
-            throw new IdNotFoundException();
+            throw new IdNotFoundException("category not found");
         if (repo instanceof AdvertiseRepository advertiseRepository && !advertiseRepository.existsById(id))
-            throw new IdNotFoundException();
+            throw new IdNotFoundException("advertise not found");
     }
 }

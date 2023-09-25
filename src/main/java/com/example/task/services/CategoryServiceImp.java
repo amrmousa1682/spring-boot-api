@@ -2,7 +2,6 @@ package com.example.task.services;
 
 import com.example.task.dtos.CategoryDto;
 import com.example.task.entities.Category;
-import com.example.task.entities.User;
 import com.example.task.exceptions.IdNotFoundException;
 import com.example.task.mappers.CategoryMapper;
 import com.example.task.repositories.CategoryRepository;

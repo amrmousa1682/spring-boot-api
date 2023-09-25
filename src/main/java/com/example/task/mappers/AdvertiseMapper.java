@@ -8,7 +8,6 @@ import org.mapstruct.*;
 public interface AdvertiseMapper {
     @Mapping(source = "userAddress", target = "user.address")
     @Mapping(source = "userPhoneNumber", target = "user.phoneNumber")
-    @Mapping(source = "userPassword", target = "user.password")
     @Mapping(source = "userEmail", target = "user.email")
     @Mapping(source = "userName", target = "user.name")
     @Mapping(source = "userId", target = "user.id")
@@ -18,8 +17,4 @@ public interface AdvertiseMapper {
 
     @InheritInverseConfiguration(name = "toEntity")
     AdvertiseDto toDto(Advertise advertise);
-
-    @InheritConfiguration(name = "toEntity")
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Advertise partialUpdate(AdvertiseDto advertiseDto, @MappingTarget Advertise advertise);
 }

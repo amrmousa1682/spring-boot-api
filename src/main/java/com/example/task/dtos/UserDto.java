@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -21,7 +22,7 @@ public class UserDto implements Serializable {
     private String password;
     private String phoneNumber;
     private String address;
-    private Set<AdvertiseDto> advertises = new LinkedHashSet<>();
+    private Set<AdvertiseDto1> advertises = new LinkedHashSet<>();
 
     /**
      * DTO for {@link com.example.task.entities.Advertise}
@@ -29,7 +30,7 @@ public class UserDto implements Serializable {
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
-    public static class AdvertiseDto implements Serializable {
+    public static class AdvertiseDto1 implements Serializable {
         private Integer id;
         private String title;
         private String description;

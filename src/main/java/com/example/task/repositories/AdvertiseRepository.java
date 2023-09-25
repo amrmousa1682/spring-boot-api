@@ -7,10 +7,10 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface AdvertiseRepository extends JpaRepository<Advertise, Integer> {
-    @Query("select a from Advertise a where upper(a.title) like upper(concat(?1, '%'))")
+    @Query("select a from Advertise a where (a.title) like (concat(?1, '%')) ")
     List<Advertise> findAllByPrefix(String title);
 
-    @Query("select a from Advertise a where upper(a.title) like upper(concat(?1, '%')) and a.category.id = ?2")
+    @Query("select a from Advertise a where (a.title) like (concat(?1, '%')) and a.category.id = ?2")
     List<Advertise> findAllByPrefixAndCategory(String title, Integer id);
 
     List<Advertise> findByCategory_Id(Integer id);

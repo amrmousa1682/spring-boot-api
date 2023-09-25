@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface CategoryRepository extends JpaRepository<Category, Integer> {
-    @Query("select c from Category c where upper(c.name) like upper(concat(?1, '%'))")
+    @Query("select c from Category c where (c.name) like (concat(?1, '%'))")
     List<Category> findAllByPrefix(String name);
 
 }

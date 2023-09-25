@@ -1,17 +1,18 @@
 package com.example.task.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
-
+@Builder
 @Getter
 @Setter
 @Entity
 @Table(name = "advertises")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Advertise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

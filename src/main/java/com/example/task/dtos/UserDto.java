@@ -1,6 +1,7 @@
 package com.example.task.dtos;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import java.util.Set;
 /**
  * DTO for {@link com.example.task.entities.User}
  */
+@Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

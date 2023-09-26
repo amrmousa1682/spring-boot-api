@@ -79,12 +79,3 @@ The available endpoints are as follows:
 )
 
 
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or create a pull request.
-Certainly! Here's an updated version of the README file that uses Maven instead of Gradle:
-
-## License
-
-This project is licensed under the [MIT License](LICENSE.txt).
-

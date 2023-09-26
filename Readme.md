@@ -35,6 +35,10 @@ docker-compose up
 
 This will start the API and its dependencies (database) using Docker Compose.
 
+## Entity-Relationship Diagram (ERD)
+
+![ERD](https://github.com/amrmousa1682/spring-boot-api/assets/70464867/b4fc9f92-48b3-41e9-982a-74260e4df4d9)
+
 ## API Documentation
 
 Once the application is running, you can access the API endpoints using the following base URL:
@@ -44,6 +48,7 @@ http://localhost:8080
 ```
 
 The available endpoints are as follows:
+
 
 ### User Endpoints
 
@@ -71,9 +76,4 @@ The available endpoints are as follows:
 - `GET /category?prefix={prefix}`: Get categories by prefix.
 - `PUT /category/{id}`: Update category information by ID.
 - `DELETE /category/{id}`: Delete a category by ID.
-
-
-## Entity-Relationship Diagram (ERD)
-
-![ERD](https://github.com/amrmousa1682/spring-boot-api/assets/70464867/b4fc9f92-48b3-41e9-982a-74260e4df4d9)
 
